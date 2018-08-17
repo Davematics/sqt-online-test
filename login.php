@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$msg="";
 include('config.php');
  if(array_key_exists("submit", $_POST)){
 $Id=$_POST['Id'];
@@ -42,7 +43,8 @@ $msg="Invalid Combination";
     <div class="modal-dialog" style="margin-bottom:0">
         <div class="modal-content">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Sign In</h3>
+                        <h3 class="panel-title">Sign In </h3>
+                        <h3 class="panel-title"><font color="#FF0000"><?php echo $msg;?></font> </h3>
                     </div>
                     <div class="panel-body">
                         <form action="" method="post"  enctype="multipart/form-data" name="form1" >
